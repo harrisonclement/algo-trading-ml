@@ -13,6 +13,6 @@ Experiment tracking is handled via **MLflow** (integrated with Databricks or loc
 * **MLflow Integration**: Logs metrics (RMSE, MAE), parameters, and artifacts (equity curves).
 
 ## Project Structure
-* **Algo_Trading_ALL.ipynb**: ML Python code outsourced to DataBricks.
+* **Algo_Trading_ALL.ipynb**: Python code.
 * **ProTrader7.py**: Streamlit script.
 * **Requirements.txt**: List of libraries needed to run the app.
