@@ -122,7 +122,7 @@ st.markdown("""
 
 # --- SIDEBAR CONFIGURATION ---
 st.sidebar.header("⚙️ Configuration")
-ticker = st.sidebar.text_input("Ticker Symbol", value="NVDA").upper()
+ticker = st.sidebar.text_input("Ticker Symbol", value="NFLX").upper()
 
 st.sidebar.divider()
 
