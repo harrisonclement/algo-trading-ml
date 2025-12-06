@@ -21,7 +21,7 @@ Experiment tracking is handled via **MLflow** (integrated with Databricks or loc
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/yourusername/algo-trading-ml.git](https://github.com/yourusername/algo-trading-ml.git)
+    git clone [https://github.com/harrisonclement/algo-trading-ml.git](https://github.com/harrisonclement/algo-trading-ml.git)
     cd algo-trading-ml
     ```
 
