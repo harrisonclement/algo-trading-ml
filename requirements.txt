@@ -1,9 +1,7 @@
 streamlit
-mlflow
+mlflow-skinny
+databricks-sdk
 yfinance
 pandas
 numpy
-databricks-sdk
 scikit-learn==1.6.1
-matplotlib
-xgboost
