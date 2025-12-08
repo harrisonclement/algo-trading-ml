@@ -1,5 +1,5 @@
 streamlit
-mlflow-skinny
+mlflow
 yfinance
 pandas
 numpy
