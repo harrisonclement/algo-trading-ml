@@ -20,34 +20,16 @@ import numpy as np
 # ======================================================================
 st.set_page_config(page_title="ProTrader AI", layout="wide")
 
-# ======================================================================
+# # ======================================================================
 # 2. CREDENTIALS & MODEL CONFIG
 # ======================================================================
 
 # 🚨 RUN ID (This ID requires Pro Features: MAs, Volatility, Momentum)
 BEST_RUN_ID = "6596bfdef96840f5bc13b511f7cfe114"
 
-def setup_mlflow_or_fallback(user_email: str, exp_suffix: str):
-    host  = os.environ.get("DATABRICKS_HOST") or "https://dbc-b5e97478-b957.cloud.databricks.com"
-    token = os.environ.get("DATABRICKS_TOKEN") or "dapi2806faac61e06eef37ff4a4f4a0d8f3b"
-    using_dbx = False
-    if host and token.startswith("dapi") and len(token) >= 30:
-        try:
-            _ = WorkspaceClient(host=host.strip(), token=token.strip()).current_user.me()
-            mlflow.set_tracking_uri("databricks")
-            mlflow.set_experiment(f"/Users/{user_email}/{exp_suffix}")
-            print("✅ Using Databricks MLflow:", mlflow.get_tracking_uri())
-            using_dbx = True
-        except Exception as e:
-            print("⚠️ Databricks auth failed → falling back to local MLflow. Reason:", e)
-    if not using_dbx:
-        local_dir = "/content/mlruns"
-        os.makedirs(local_dir, exist_ok=True)
-        mlflow.set_tracking_uri(f"file:{local_dir}")
-        mlflow.set_experiment(exp_suffix + "_LOCAL")
-        print("✅ Using LOCAL MLflow:", mlflow.get_tracking_uri(), "| Experiment:", exp_suffix + "_LOCAL")
-    return using_dbx
-
+# 🔑 DATABRICKS CREDENTIALS
+os.environ["DATABRICKS_HOST"] = "https://dbc-b5e97478-b957.cloud.databricks.com/"
+os.environ["DATABRICKS_TOKEN"] = "dapi2806faac61e06eef37ff4a4f4a0d8f3b"
 
 # ======================================================================
 # 3. HELPER FUNCTIONS
