@@ -33,8 +33,6 @@ Experiment tracking is handled via **MLflow** (integrated with Databricks or loc
 3.  **Configure Credentials (Optional for Databricks):**
     Set environment variables if using Databricks MLflow. Otherwise, it defaults to local logging.
     ```bash
-    export DATABRICKS_HOST="https://dbc-b5e97478-b957.cloud.databricks.com"
-    export DATABRICKS_TOKEN="dapi2806faac61e06eef37ff4a4f4a0d8f3b"
     ```
 
 ## Usage
@@ -42,4 +40,3 @@ Experiment tracking is handled via **MLflow** (integrated with Databricks or loc
 **Run the Model Sweep:**
 Train all defined models and log results to MLflow.
 ```bash
-python main.py --mode train --user hjcleme1@asu.edu
