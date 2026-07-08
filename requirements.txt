@@ -1,7 +1,6 @@
 streamlit
-mlflow-skinny
-databricks-sdk
+mlflow
+scikit-learn
 yfinance
 pandas
 numpy
-scikit-learn==1.6.1
